@@ -8,6 +8,7 @@ using namespace std;
 // driver code
 int main()
 {
+	int i = 0;
 	// filestream variable file
 	ifstream file;
 	string data;
@@ -20,15 +21,17 @@ int main()
 	file.open (filename.c_str());//file.open(filename.c_str()); //
 	getline (file, line);
 	cout << "skipped " << line << endl; // cout << data << endl;
-
 	// extracting words form the file
 	while (file >> data) //while (file >> data)
 	{
-		// displaying content
-		// print strings (data) horizontally, each line has target angle, range, and pause time
-		getline(file, data);
-		cout << data << endl;
-	}
+		for (i= 0; i <3; i++);
+		{
+			// displaying content
+			// print strings (data) horizontally, each line has target angle, range, and pause time
+			cout << data[1]  << " ";
 
+		}
+	}
+	cout <<"\n";
 	return 0;
 }
