@@ -1,4 +1,7 @@
 Target Angle:       Range of Error:        Pause Time:    
 1.5                  2.8                      3.6
-32                   124                        9
+32                   1.24                        9
+78.7 								1.8    											2.1
+
+
 
