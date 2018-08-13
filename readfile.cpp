@@ -20,7 +20,7 @@ int main()
 
 	// filename of the file
 	filename = "readfile.txt";
-	exec_file = "./motor";
+	exec_file = " ./motor ";
 	// opening file
 	file.open (filename.c_str());//file.open(filename.c_str()); //
 	getline (file, line);
@@ -29,18 +29,21 @@ int main()
 	cout << exec_file << endl;
 	while (file >> data) //while (file >> data)
 	{
+		command = data + " ";
 		if ((i % 3) ==0)
-			cout <<exec_file<< " ";
-		cout << data << " ";
+		//command = data;
+		//command = exec_file + data;
+			cout << exec_file << " ";
+		cout << command;
+		//cout << data << " ";
 		if ((i % 3) == 2)
 		// displaying content
 			// print strings (data) horizontally, each line has target angle, range, and pause time
-			cout <<endl;
+			//cout <<command;
+			cout << endl;
 		i++;
 		//store printed values into string variable "command", print "command"
-
 	}
-	//cout << data <<endl;
 	cout <<"\n";
 	return 0;
 }
