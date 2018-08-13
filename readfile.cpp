@@ -1,3 +1,10 @@
+/*
+ * Created by Emily Ojeda, 08/13/18. 
+ * To be used on the rate table for calibrating ground based magnetometer's as part of research conducted by the University of Michigan's Space Research Department.
+ * This program reads data from readfile.txt. 
+ * The data in the file can be edited by the user, and it is used by the main program to set values of target angle, range of error, and pause time between each test. 
+ * The data is then sent to the main program (motor) using the int system(command) command. 
+ */
 #include <bits/stdc++.h>
 #include <iostream>
 #include <stdlib.h>
@@ -5,7 +12,6 @@
 #include <string>
 using namespace std;
 
-// driver code
 int main()
 {
 	int i = 0;
@@ -16,34 +22,36 @@ int main()
 	string line;
 	string exec_file;
 	string command;
-	//	string word, t, q, filename; //string data, int, number, 
-
+	
 	// filename of the file
 	filename = "readfile.txt";
 	exec_file = " ./motor ";
+	
 	// opening file
 	file.open (filename.c_str());//file.open(filename.c_str()); //
 	getline (file, line);
 	cout << "skipped " << line << endl; // cout << data << endl;
+	
 	// extracting words form the file
-	cout << exec_file << endl;
 	while (file >> data) //while (file >> data)
 	{
 		command = data + " ";
+	
 		if ((i % 3) ==0)
-		//command = data;
-		//command = exec_file + data;
 			cout << exec_file << " ";
 		cout << command;
-		//cout << data << " ";
+		
 		if ((i % 3) == 2)
 		// displaying content
-			// print strings (data) horizontally, each line has target angle, range, and pause time
-			//cout <<command;
+		// print strings (data) horizontally, each line has target angle, range, and pause time
 			cout << endl;
 		i++;
-		//store printed values into string variable "command", print "command"
+//	system (command.c_str());
 	}
+	//system (command.c_str());
 	cout <<"\n";
+	//system (command.c_str());
 	return 0;
+	system (command.c_str());
+	cout << system(command.c_str());
 }
